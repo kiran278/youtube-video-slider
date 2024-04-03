@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Our Youtube Videos</h1>
+        <div class="owl-carousel owl-theme owl-stage">
+            <div class="item-video" data-merge="2">
+                <a href="https://youtu.be/A5CK6Uqe_YU?si=piDpMTt8SryBWF2m" class="owl-video"></a>
+            </div>
+            <div class="item-video" data-merge="1">
+                <a href="https://youtu.be/ll18OYGsxLc?si=rSrklnfgknK_2Ccv" class="owl-video"></a>
+            </div>
+            <div class="item-video" data-merge="2">
+                <a href="https://youtu.be/HkhbPtN6dag?si=-_-pIfLyzWY9S8Yw" class="owl-video"></a>
+            </div>
+            <div class="item-video" data-merge="1">
+                <a href="https://youtu.be/wXknbnqY9OQ?si=WZN9yZgrZP6eM1ok" class="owl-video"></a>
+            </div>
+            <div class="item-video" data-merge="2">
+                <a href="https://youtu.be/TzqSrF18600?si=vn7jE9oWS7J_rs6h" class="owl-video"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+
+    <script>
+        $(".owl-carousel").owlCarousel({
+            merge: true,
+            loop: true,
+            margin: 10,
+            video: true,
+            // lazyLoad: true,
+            center: true,
+            // nav: true,
+        });
+        
+        $(".owl-carousel").on('mousewheel', '.owl-stage', function (e) {
+            if (e.deltaY > 0) {
+                $(".owl-carousel").trigger('next.owl');
+            } else {
+                $(".owl-carousel").trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body{
+    background: #cecece;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin-top: 80px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.owl-carousel{
+    top: 40px;
+}
+.owl-carousel .item-video{
+    height: 300px;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    display: inline-block;
+    border: 1px solid lightblue;
+}
+.owl-dot span{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 5px 5px;
+    display: block;
+    
+}
+.owl-dot.active span{
+    background-color: #636060;
+    /* outline: 1px solid blue;
+    outline-offset: 4px; */
+}
